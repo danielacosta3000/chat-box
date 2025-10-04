@@ -22,6 +22,7 @@ body,div,ul,li,a,h1,h2,h3,h4,p {
     background-color: var(--chat-bg-color);
     margin: 50px auto;
     border-radius: 20px;
+    box-shadow: 2px 2px 9px #0003;
 }
 
 .chat__user {
@@ -52,6 +53,7 @@ body,div,ul,li,a,h1,h2,h3,h4,p {
     max-width: clamp(300px, 70%, 600px);
     margin: 6px;
     position: relative;
+    width: fit-content;
 }
 
 

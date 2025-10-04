@@ -2,17 +2,64 @@
     box-sizing: border-box;
 }
 
-body,div,ul,li,a,h1,h2,h3,h4 {
-    margin: 0;
-    padding: 0;
-}
-
 body {
+    background-color: var(--bg-color);
     box-sizing: border-box;
     font-family: sans-serif;
     --bg-color: color-mix(in srgb, #f62 70%, #fff);
-    --cb-color: #fff;
+    --chat-bg-color: #fff;
     --dark-color: #f62;
     --text-color: #444;
 }
 
+body,div,ul,li,a,h1,h2,h3,h4,p {
+    margin: 0;
+    padding: 0;
+}
+
+.chat {
+    max-width: clamp(300px, 70%, 900px);
+    background-color: var(--chat-bg-color);
+    margin: 50px auto;
+    border-radius: 20px;
+}
+
+.chat__user {
+    display: flex;
+    align-items: center;
+    border-bottom: 1px solid var(--dark-color);
+}
+
+.chat__user img {
+    max-width: 2.4rem;
+    border-radius: 50%;
+    margin: 4px;
+}
+
+.chat__content {
+    padding: 12px;
+}
+
+.msg {
+    background-color: var(--bg-color);
+    color: #fff;
+    font-size: .6rem;
+    padding: 7px;
+    border-radius: 9px 9px 9px 0;
+    z-index: 10;
+    max-width: clamp(300px, 70%, 600px);
+    margin: 6px;
+    position: relative;
+}
+
+.msg::before {
+    content: '';
+    position: absolute;
+    height: 18px;
+    width: 18px;
+    background-color: var(--bg-color);
+    bottom: -3px;
+    left: -4px;
+    z-index: -1;
+    clip-path: polygon(50% 0%, 0% 100%, 100% 66%);
+}
